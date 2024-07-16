@@ -1,0 +1,94 @@
+.login-background {
+    background-color: #f5f5f5;
+    height: 100vh;
+
+    .login-container {
+        width: 400px;
+        border-radius: 5px;
+        background-color: #ffffff;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        height: 400px;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+
+        .login-content {
+            padding: 30px;
+            justify-self: center;
+
+            .text-login {
+                text-align: center;
+                font-weight: 600;
+                font-size: 24px;
+                padding-top: 10px;
+                outline: none;
+            }
+
+
+            .login-input {
+                margin: 8px 0;
+
+                .form-control {
+                    height: 40px;
+                    margin-top: 2px;
+                    padding-left: 55px;
+                }
+
+                .custom-input {
+                    position: relative;
+
+                    .icon-left {
+                        position: absolute;
+                        top: 13px;
+                        left: 15px;
+                        color: #7a7a7a;
+                    }
+
+                    .separating-bar {
+                        width: 1px;
+                        height: 40px;
+                        background-color: #cacaca;
+                        position: absolute;
+                        top: 0px;
+                        left: 45px;
+                    }
+
+                    .icon-right {
+                        position: absolute;
+                        right: 15px;
+                        top: 15px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .btn-login {
+                width: 100%;
+                margin: 10px 0;
+                height: 40px;
+                border-radius: 3px;
+                background-color: rgb(224, 21, 21);
+                color: #ffffff;
+                font-size: 16px;
+                outline: none;
+                border: none;
+            }
+
+            .btn-login:hover {
+                opacity: 0.8;
+            }
+
+            .forgot-password {
+                font-size: 12px;
+                margin: 10px 0;
+                cursor: pointer;
+            }
+
+        }
+    }
+
+
+}

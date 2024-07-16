@@ -21,7 +21,8 @@ class Login extends Component {
     initialState = {
         username: '',
         password: '',
-        loginError: ''
+        loginError: '',
+        errMessage: ''
     }
 
     state = {
@@ -131,6 +132,10 @@ class Login extends Component {
                                 value={password}
                                 onChange={this.onPasswordChange}
                             />
+                        </div>
+
+                        <div className="col-12" style={{ color: 'red' }}>
+                            {this.state.errMessage}
                         </div>
 
                         {loginError !== '' && (
