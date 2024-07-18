@@ -4,7 +4,7 @@ import { push } from "connected-react-router";
 import * as actions from "../../store/actions"
 import './Login.scss';
 import { handleLoginApi } from '../../services/userSevice';
-import { FormattedMessage } from 'react-intl';
+
 
 
 
@@ -73,7 +73,7 @@ class Login extends Component {
                             <label>Tài khoản*</label>
 
                             <div className='custom-input'>
-                                <i class="far fa-user icon-left" ></i>
+                                <i className="far fa-user icon-left" ></i>
                                 <div className='separating-bar'></div>
                                 <input
                                     type="text"
@@ -89,7 +89,7 @@ class Login extends Component {
                             <label>Mật khẩu*</label>
 
                             <div className='custom-input'>
-                                <i class="fas fa-unlock-alt icon-left"></i>
+                                <i className="fas fa-unlock-alt icon-left"></i>
                                 <div className='separating-bar'></div>
                                 <input
                                     type={this.state.isShowPassword ? 'text' : 'password'}
@@ -100,7 +100,7 @@ class Login extends Component {
                                     onChange={this.onPasswordChange}
                                 />
                                 <span onClick={() => { this.handleShowHidePassword() }}>
-                                    <i class={this.state.isShowPassword ? "far fa-eye icon-right" : "far fa-eye-slash icon-right"}></i>
+                                    <i className={this.state.isShowPassword ? "far fa-eye icon-right" : "far fa-eye-slash icon-right"}></i>
 
                                 </span>
                             </div>
