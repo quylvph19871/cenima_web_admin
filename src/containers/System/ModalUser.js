@@ -7,6 +7,7 @@ import {
     ModalBody,
     ModalFooter
 } from 'reactstrap';
+import { emitter } from '../../utils/emitter';
 
 class ModalUser extends Component {
 
@@ -21,9 +22,22 @@ class ModalUser extends Component {
             gender: '0',
             roleId: '1'
         }
-
+        this.listenToEmitter();
     }
 
+    listenToEmitter() {
+        emitter.on('EVENT_CLEAR_MODAL_DATA', data => {
+            this.setState({
+                email: '',
+                passWord: '',
+                firstName: '',
+                lastName: '',
+                phoneNumber: '',
+                gender: '0',
+                roleId: '1'
+            })
+        })
+    }
     componentDidMount() {
         console.log('mouting modal');
     }
