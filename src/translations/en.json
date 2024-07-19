@@ -1,4 +1,7 @@
 {
+    "homeheader": {
+        "movie": "Movie"
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",

@@ -1,4 +1,7 @@
 {
+    "homeheader": {
+        "movie": "Phim"
+    },
     "common": {
         "add": "Thêm",
         "edit": "Sửa",
