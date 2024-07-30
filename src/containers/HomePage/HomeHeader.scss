@@ -1,7 +1,10 @@
 .home-header-container {
-    height: 80px;
+    height: 120px;
     width: 100%;
-    padding: 0 50px;
+    padding: 0 120px;
+    background: url('../../assets/images/bg-top.png');
+    position: sticky;
+    top: 0;
 
     .home-header-content {
         width: 100%;
@@ -9,33 +12,33 @@
         display: flex;
 
         .left-content {
-            width: 20%;
+            width: 10%;
             display: flex;
             align-items: center;
             cursor: pointer;
-
-            .header-logo {
-
-                height: 100%;
-                width: 100%;
-                transform: scale(0.5, 0.5);
-                margin-left: -45px;
-            }
+            padding-top: 35px;
 
             i {
                 font-size: 25px;
                 color: grey;
+
+                &:hover {
+                    color: #8a1616;
+                }
             }
         }
 
         .center-content {
-            width: 55%;
+            width: 65%;
             display: flex;
             align-items: center;
             gap: 40px;
+            padding-top: 35px;
 
             .child-content {
                 cursor: pointer;
+
+
 
                 .subs-title {
                     font-weight: 600;
@@ -44,7 +47,8 @@
                     font-size: 18px;
 
                     &:hover {
-                        color: #898989;
+                        color: #8a1616;
+
                     }
                 }
             }
@@ -56,6 +60,7 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
+            padding-top: 35px;
 
             .language-vn {
                 cursor: pointer;

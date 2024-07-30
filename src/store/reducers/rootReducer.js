@@ -12,23 +12,23 @@ const persistCommonConfig = {
     stateReconciler: autoMergeLevel2,
 };
 
-const adminPersistConfig = {
-    ...persistCommonConfig,
-    key: 'admin',
-    whitelist: ['isLoggedIn', 'adminInfo']
-};
-
 const userPersistConfig = {
     ...persistCommonConfig,
     key: 'user',
     whitelist: ['isLoggedIn', 'userInfo']
 };
 
+const appPersistConfig = {
+    ...persistCommonConfig,
+    key: 'app',
+    whitelist: ['language']
+}
+
 const createRootReducer = (history) => combineReducers({
     router: connectRouter(history),
-    admin: persistReducer(adminPersistConfig, adminReducer),
     user: persistReducer(userPersistConfig, userReducer),
-    app: appReducer
+    app: persistReducer(appPersistConfig, appReducer),
+    admin: adminReducer
 });
 
 export default createRootReducer;

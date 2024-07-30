@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './HomeHeader.scss'
-import logo from '../../assets/images/logocenima.jpg'
 import { FormattedMessage } from 'react-intl';
 import { LANGUAGES } from '../../utils/';
 import { changeLanguageApp } from '../../store/actions/appActions.js';
@@ -12,14 +11,12 @@ class HomeHeader extends Component {
     }
     render() {
         let language = this.props.language
-        console.log('check language', language);
         return (
             <React.Fragment>
                 <div className='home-header-container'>
                     <div className="home-header-content">
                         <div className="left-content">
                             <i className="fas fa-bars"></i>
-                            <img className="header-logo" src={logo} alt="" />
 
                         </div>
                         <div className="center-content">
@@ -139,6 +136,7 @@ class HomeHeader extends Component {
 const mapStateToProps = state => {
     return {
         isLoggedIn: state.user.isLoggedIn,
+        userInfo: state.user.userInfo,
         language: state.app.language,
     };
 };
